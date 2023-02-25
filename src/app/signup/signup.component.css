@@ -1,0 +1,13 @@
+.login-form{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, 30%);
+    background: linear-gradient(#e66465, #9198e5);
+}
+.color-white{
+    color: white;
+}

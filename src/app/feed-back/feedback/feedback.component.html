@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="login-form">
+                    <h3 class="text-center color-white">pleae leav a feedBack</h3>
+                    <form [formGroup]="feedbackForm" (ngSubmit)="onsubmit(feedbackForm.value)">
+                        <div class="form-group">
+                          <label for="exampleInputname color-white">Name</label>
+                          <input type="text" formControlName="name" class="form-control" id="exampleInputname" aria-describedby="emailHelp">
+                          <span class="text-danger"
+                                *ngIf="name && name.touched && name.invalid">
+                                Name is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail color-white">Email</label>
+                          <input type="email" formControlName="email" class="form-control" id="exampleInputEmail">
+                          <span class="text-danger"
+                                *ngIf="email && email.touched && email.invalid">
+                                Email is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputnumber color-white">number</label>
+                            <input type="text" formControlName="number" class="form-control" id="exampleInputnumber">
+                            <span class="text-danger"
+                                *ngIf="number && number.touched && number.invalid">
+                                Number is required
+                            </span>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">feedback</label>
+                            <textarea class="form-control" formControlName="feedback" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <span class="text-danger"
+                                *ngIf="feedback && feedback.touched && feedback.invalid">
+                                FeedBack is required
+                            </span>
+                          </div>
+                        <button type="submit" [disabled]="feedbackForm.invalid" (click)="fbsubmit()" class="btn btn-primary mb-3">Submit FeedBack</button>
+                        <button type="button" (click)="backtoproduct()" class="btn btn-success mr-4" >back to products page</button>
+                        <button type="button" (click)="logout()" class="btn btn-danger">logout</button>
+                      </form>
+            </div>
+        </div>
+    </div>
+</div>

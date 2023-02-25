@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="htl-btn">
+        <div class="row">
+            <div class="btn">
+                <div class="col-xs-1 col-sm-4 col-xs-2 col-md-6">
+                    <div class="hl-btn">
+                        <button type="button" (click)="hightolow('Price')" class="btn btn-primary">{{high ? 'high tolow' :
+                            'low to high'}}</button>
+                        <!-- <button type="button" (click)="lowtohigh()" class="btn btn-primary">low to high</button> -->
+                    </div>
+                </div>
+                <div class=" col-xs-8 col-sm-8 col-xs-10 col-md-6">
+    
+                    <div class="beedback-btn float-right">
+                        <button type="button" (click)="feedback()" class="btn btn-warning">feedBack</button>
+                        <button type="button" (click)="logout()" class="btn btn-danger ml-3">logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="products">
+        <div class="row">
+            <div class=" col-xs-12 col-sm-6 col-md-3 col-lg-3"
+                *ngFor="let pdata of productData | orderBy: orderhandler : disorder">
+                <div class="card mb-4" style="width: 15rem;">
+                    <div class="card-body">
+                        <img class="p-image text-center" [src]="pdata.ListImagePath + pdata.Images.split('|')[0]" alt="">
+                        <h6><span>Collection:</span> {{pdata.Collection}}</h6>
+                        <p><span>Price:</span>{{pdata.Price}}</p>
+                        <p><span>Product Title:</span> {{pdata.ProductTitle}}</p>
+                        <p><span>StyleName:</span> {{pdata.StyleName}}</p>
+                        <p><span>StyleNumber:</span> {{pdata.StyleNumber}}</p>
+                        <p><span>NetQuantity:</span> {{pdata.NetQuantity}}</p>
+                        <p><span>ProductCode:</span> {{pdata.ProductCode}}</p>
+                        <p><span>AvailableSizes</span> {{pdata.AvailableSizes}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

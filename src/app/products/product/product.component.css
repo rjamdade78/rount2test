@@ -1,0 +1,25 @@
+.htl-btn{
+    margin: 20px 0px;
+}
+.container{
+    display: flow-root;
+}
+.p-image{
+    width: 100px;
+    height: 100px;
+}
+.card{
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    height: 375px;
+    /* height: 300px; */
+}
+.card-body p{
+    font-size: 14px;
+    margin: 0px;
+}
+.card-body p span{
+    font-weight: bold;
+}

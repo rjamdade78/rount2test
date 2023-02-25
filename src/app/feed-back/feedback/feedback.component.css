@@ -1,0 +1,29 @@
+/* .htl-btn{
+    margin: 20px 0px;
+} */
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+.login-form{
+    width: 400px;
+    padding: 40px;
+    margin: 10% 0% 10%;
+    border-radius: 5px;
+    background: linear-gradient(#e66465, #9198e5);
+}
+.card{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    height: 300px;
+}
+.card-body p{
+    font-size: 14px;
+    margin: 0px;
+}
+.card-body p span{
+    font-weight: bold;
+}
